@@ -237,3 +237,306 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
 }
+
+/*--SECCIONES ANIMACIONES */
+
+.section-animated {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.section-animated.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #28a745, #20c997);
+    transition: all 0.8s ease;
+    transform: translateX(-50%);
+}
+
+.section-animated.visible .section-title::after {
+    width: 100px;
+}
+
+/*--HISTORIA */
+
+.historia-bereber-section {
+    background-color: #c2a178;
+    color: #212529;
+}
+
+.historia-bereber-section .card {
+    background-color: #fff4e4;
+}
+
+.historia-bereber-section .card-title {
+    color: #5e3d1c;
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.video-animated {
+    transition: all 0.3s ease;
+}
+
+.video-animated:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.video-highlight {
+    width: 100%;
+    max-width: 600px;
+    border: 4px solid #5e3d1c;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .video-highlight {
+        max-width: 90%;
+    }
+}
+
+/*--GALERIA SLIDE */
+.carousel-container {
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-custom {
+    background-color: #d9c3aa;
+}
+
+.custom-carousel {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 5rem;
+    overflow: visible;
+}
+
+.carousel-inner {
+    overflow: visible;
+}
+
+.carousel-item {
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    opacity: 0.3;
+    transform: scale(0.9);
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.carousel-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.carousel-img:hover {
+    transform: scale(1.02);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .custom-carousel {
+        padding: 0 1rem;
+        max-width: 90%;
+    }
+}
+
+/*--COMO JUGAR ANIMACIONES */
+
+.step-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.step-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.icon-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+}
+
+.icon-animated {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.icon-container:hover .icon-animated {
+    animation: rotate 0.6s ease;
+}
+
+/*--EDUCACION Y CONSERVACION */
+
+.bg-educadores {
+    background-color: #c2a178;
+}
+
+.content-slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease;
+}
+
+.content-slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease;
+}
+
+.content-slide-left.visible,
+.content-slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.list-item-animated {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease;
+}
+
+.list-item-animated.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.arrow-animated {
+    transition: all 0.3s ease;
+}
+
+.list-item-animated:hover .arrow-animated {
+    transform: translateX(5px);
+    color: #20c997 !important;
+}
+
+.btn-bounce {
+    transition: all 0.3s ease;
+}
+
+.btn-bounce:hover {
+    animation: bounce 0.6s ease;
+}
+
+.educacion-conservacion {
+    background-color: #d9c3aa;
+}
+
+.card-3d {
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+}
+
+.card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.img-card {
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.overlay-dark {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.card-3d:hover .overlay-dark {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card-img-overlay-custom {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.arrow-bottom-right {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    transition: all 0.3s ease;
+}
+
+.arrow-bounce {
+    animation: bounce 2s infinite;
+}
+
+.card-3d:hover .arrow-bottom-right {
+    transform: translateX(10px);
+    color: #28a745;
+}
+
+.card-content {
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.card-3d:hover .card-content {
+    transform: scale(1.1);
+}
+
+.card-link-wrapper {
+    text-decoration: none;
+    color: white;
+}
